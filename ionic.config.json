@@ -1,7 +1,9 @@
 {
   "name": "weather",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
-  "type": "angular"
+  "type": "angular",
+  "id": "a20a2e06"
 }

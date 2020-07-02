@@ -1,20 +1,36 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="image">
+    <ion-header class="background" [translucent]="true">
+      <ion-toolbar>
+        <ion-title>
+          <input
+            type="text"
+            autocapitalize="off"
+            class="search-box"
+            placeholder="Search City or Area Code..."
+            (keyup.enter)="getResult($event)"
+          />
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <div class="app-wrap">
+      <header></header>
+      <main>
+        <section class="location">
+          <div class="notification hidden"></div>
+          <div class="city">--</div>
+          <div class="date"></div>
+          <div class="image2">
+            <img src="../../assets/icon/unknown.png" alt="image" />
+          </div>
+        </section>
+        <div class="current">
+          <div class="temp">0<span>&deg;</span>C</div>
+          <div class="weather">--</div>
+          <div class="hi-low">0<span>&deg;</span>C/0<span>&deg;</span>C</div>
+        </div>
+        <!-- <pre>{{ global.apiData | async }}</pre> -->
+      </main>
+    </div>
   </div>
 </ion-content>
